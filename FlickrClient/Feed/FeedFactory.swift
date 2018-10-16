@@ -12,6 +12,14 @@ final class FeedFactory {
   func create() -> UIViewController {
     let vc = FeedViewController()
     
+    let presenter = FeedPresenter()
+    let interactor = FeedInteractor(
+      presenter: presenter
+    )
+    
+    vc.interactor = interactor
+    vc.setTableSource(presenter)
+    presenter.view = vc
     return vc
   }
 }

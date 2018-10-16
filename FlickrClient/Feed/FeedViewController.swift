@@ -8,13 +8,30 @@
 
 import UIKit
 
+protocol FeedInteractorProtocol {
+  func loadDta()
+}
+
 class FeedViewController: CustomViewController<FeedView> {
+  
+  var interactor: FeedInteractorProtocol!
+  
+  func setTableSource(_ tableSource: TableSource) {
+    customView.source = tableSource
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     view.backgroundColor = .orange
     title = "Photos"
+    
+    interactor.loadDta()
   }
-  
+}
+
+extension FeedViewController: FeedViewProtocol {
+  func reloadData() {
+    customView.reloadData()
+  }
 }
