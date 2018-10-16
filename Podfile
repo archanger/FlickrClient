@@ -7,4 +7,5 @@ target 'FlickrClient' do
 
   # Pods for FlickrClient
   pod 'Kingfisher', '4.10.0'
+  pod 'SnapKit', '4.0.1'
 end
