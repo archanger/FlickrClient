@@ -11,7 +11,7 @@ import UIKit
 extension FeedPresentationModel: CellPresentableModel {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: FeedCell = tableView.dequeueCell(for: indexPath)
-    cell.textLabel?.text = title
+    cell.update(model: self)
     return cell;
   }
 }
