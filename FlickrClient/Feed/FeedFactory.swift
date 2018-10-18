@@ -14,7 +14,8 @@ final class FeedFactory {
     
     let presenter = FeedPresenter()
     let interactor = FeedInteractor(
-      presenter: presenter
+      presenter: presenter,
+      feedService: FeedService()
     )
     
     vc.interactor = interactor

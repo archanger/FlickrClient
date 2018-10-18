@@ -28,6 +28,7 @@
 		0EDE83782177C99F0089CB13 /* FeedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE83772177C99F0089CB13 /* FeedInfoView.swift */; };
 		0EDE837A2177D18B0089CB13 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDE83792177D18B0089CB13 /* Feed.xcassets */; };
 		0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE837C217903910089CB13 /* FeedsPhoto.swift */; };
+		0EDE837F217908820089CB13 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE837E217908820089CB13 /* FeedService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		0EDE83772177C99F0089CB13 /* FeedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfoView.swift; sourceTree = "<group>"; };
 		0EDE83792177D18B0089CB13 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
 		0EDE837C217903910089CB13 /* FeedsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsPhoto.swift; sourceTree = "<group>"; };
+		0EDE837E217908820089CB13 /* FeedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedService.swift; sourceTree = "<group>"; };
 		1AA449519ADF93213C74F775 /* Pods-FlickrClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.release.xcconfig"; sourceTree = "<group>"; };
 		316E7DB3F54C1B695DF6E017 /* Pods_FlickrClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC00A0B98C8C808BC8B3A276 /* Pods-FlickrClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				0EDE835621766A360089CB13 /* FeedViewController.swift */,
 				0EDE83672176797D0089CB13 /* FeedPresenter.swift */,
 				0EDE836F21767E5A0089CB13 /* FeedInteractor.swift */,
+				0EDE837E217908820089CB13 /* FeedService.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */,
 				0EDE836E21767CA00089CB13 /* FeedPresentationModel+Extensions.swift in Sources */,
 				0E6D0E8321765FDA00623EE3 /* AppDelegate.swift in Sources */,
+				0EDE837F217908820089CB13 /* FeedService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
