@@ -9,7 +9,11 @@
 import Foundation
 
 final class FeedService {
+  init(networkProvider: AbstractNetworkProvider) {
+    _networkProvider = networkProvider
+  }
   
+  private let _networkProvider: AbstractNetworkProvider
 }
 
 extension FeedService: FeedServiceProtocol {
