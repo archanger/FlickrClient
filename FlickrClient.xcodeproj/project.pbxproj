@@ -27,6 +27,7 @@
 		0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE83752177C7520089CB13 /* FeedMainPhotoView.swift */; };
 		0EDE83782177C99F0089CB13 /* FeedInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE83772177C99F0089CB13 /* FeedInfoView.swift */; };
 		0EDE837A2177D18B0089CB13 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EDE83792177D18B0089CB13 /* Feed.xcassets */; };
+		0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE837C217903910089CB13 /* FeedsPhoto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		0EDE83752177C7520089CB13 /* FeedMainPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedMainPhotoView.swift; sourceTree = "<group>"; };
 		0EDE83772177C99F0089CB13 /* FeedInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfoView.swift; sourceTree = "<group>"; };
 		0EDE83792177D18B0089CB13 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
+		0EDE837C217903910089CB13 /* FeedsPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsPhoto.swift; sourceTree = "<group>"; };
 		1AA449519ADF93213C74F775 /* Pods-FlickrClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.release.xcconfig"; sourceTree = "<group>"; };
 		316E7DB3F54C1B695DF6E017 /* Pods_FlickrClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC00A0B98C8C808BC8B3A276 /* Pods-FlickrClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		0EDE8353217668E20089CB13 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				0EDE837B217903770089CB13 /* Models */,
 				0EDE835E2176729E0089CB13 /* Views */,
 				0EDE8354217668F40089CB13 /* FeedFactory.swift */,
 				0EDE835621766A360089CB13 /* FeedViewController.swift */,
@@ -145,6 +148,14 @@
 				0EDE836B21767B510089CB13 /* UITableView+Extensions.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		0EDE837B217903770089CB13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0EDE837C217903910089CB13 /* FeedsPhoto.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E59177A6F2044811AD75FD26 /* Pods */ = {
@@ -295,6 +306,7 @@
 				0EDE8355217668F40089CB13 /* FeedFactory.swift in Sources */,
 				0EDE83742177C5170089CB13 /* NamedAvatarView.swift in Sources */,
 				0EDE83782177C99F0089CB13 /* FeedInfoView.swift in Sources */,
+				0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */,
 				0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */,
 				0EDE836C21767B510089CB13 /* UITableView+Extensions.swift in Sources */,
 				0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */,

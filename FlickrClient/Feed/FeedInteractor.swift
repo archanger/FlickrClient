@@ -9,19 +9,37 @@
 import Foundation
 
 protocol FeedPresenterProtocol {
-  func dataLoaded()
+  func dataLoaded(_ data: [FeedsPhoto])
+  func failedLoading(with error: Error)
+}
+
+protocol FeedServiceProtocol {
+  func receiveList(onComlete: @escaping ([FeedsPhoto]) -> Void, onFailure: @escaping (Error) -> Void)
 }
 
 final class FeedInteractor {
-  init(presenter: FeedPresenterProtocol) {
+  init(presenter: FeedPresenterProtocol, feedService: FeedServiceProtocol) {
     _presenter = presenter
+    _feedService = feedService
   }
   
   private var _presenter: FeedPresenterProtocol
+  private var _feedService: FeedServiceProtocol
 }
 
 extension FeedInteractor: FeedInteractorProtocol {
   func loadDta() {
-    _presenter.dataLoaded()
+    _feedService.receiveList(
+      onComlete: { [weak self] feed in
+        DispatchQueue.main.async {
+          self?._presenter.dataLoaded(feed)
+        }
+      },
+      onFailure: { [weak self] error in
+        DispatchQueue.main.async {
+          self?._presenter.failedLoading(with: error)
+        }
+      }
+    )
   }
 }

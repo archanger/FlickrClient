@@ -11,28 +11,12 @@ import SnapKit
 
 class FeedCell: UITableViewCell {
   func update(model: FeedPresentationModel) {
-    avatarView.update(model: .init(
-      imageURL: model.avatarURL,
-      name: model.userName
-    ))
-    mainPhotoView.update(model: .init(
-      imageURL: model.imageURL,
-      title: model.title
-    ))
-    
+    avatarView.update(model: model.avatarModel)
+    mainPhotoView.update(model: model.mainPhotoModel)
     infoView.update(model: FeedInfoView.Model(
-      favoritesModel: IconedInfoView.Model(
-        icon: #imageLiteral(resourceName: "thumb_up"),
-        text: model.favoritesCount
-      ),
-      viewsModel: IconedInfoView.Model(
-        icon: #imageLiteral(resourceName: "eye"),
-        text: model.viewsCount
-      ),
-      commentsModel: IconedInfoView.Model(
-        icon: #imageLiteral(resourceName: "comment"),
-        text: model.commentsCount
-      )
+      favoritesModel: model.favoritesCountModel,
+      viewsModel: model.viewsCountModel,
+      commentsModel: model.commentsCountModel
     ))
   }
   

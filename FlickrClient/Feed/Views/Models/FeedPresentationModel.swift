@@ -9,11 +9,9 @@
 import Foundation
 
 struct FeedPresentationModel {
-  let avatarURL: URL?
-  let userName: String
-  let imageURL: URL?
-  let title: String
-  let favoritesCount: String
-  let viewsCount: String
-  let commentsCount: String
+  let avatarModel: NamedAvatarView.Model
+  let mainPhotoModel: FeedMainPhotoView.Model
+  let favoritesCountModel: IconedInfoView.Model
+  let viewsCountModel: IconedInfoView.Model
+  let commentsCountModel: IconedInfoView.Model
 }
