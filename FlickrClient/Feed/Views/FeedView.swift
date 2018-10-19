@@ -32,6 +32,8 @@ class FeedView: UIView {
     
     backgroundColor = .white
     
+    _tableView.allowsSelection = false
+    
     addSubview(_tableView)
     _tableView.snp.makeConstraints { make in
       make.edges.equalTo(safeAreaLayoutGuide)
