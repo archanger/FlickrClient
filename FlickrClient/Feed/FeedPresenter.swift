@@ -10,6 +10,7 @@ import UIKit
 
 protocol FeedViewProtocol: class {
   func reloadData()
+  func display(error: Error)
 }
 
 final class FeedPresenter: NSObject {
@@ -47,6 +48,6 @@ extension FeedPresenter: FeedPresenterProtocol {
   }
   
   func failedLoading(with error: Error) {
-    print(error)
+    view?.display(error: error)
   }
 }

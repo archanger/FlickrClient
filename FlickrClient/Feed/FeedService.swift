@@ -21,7 +21,7 @@ extension FeedService: FeedServiceProtocol {
   func receiveList(onComlete: @escaping ([FeedsPhoto]) -> Void, onFailure: @escaping (Error) -> Void) {
     
     guard let url = URL(string: _entrypoint) else {
-      onFailure(NSError(domain: "", code: 108, userInfo: [NSLocalizedDescriptionKey: "Wrong URL"]))
+      onFailure(NSError(domain: "", code: 101, userInfo: [NSLocalizedDescriptionKey: "Wrong URL"]))
       return
     }
     

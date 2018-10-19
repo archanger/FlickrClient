@@ -34,4 +34,10 @@ extension FeedViewController: FeedViewProtocol {
   func reloadData() {
     customView.reloadData()
   }
+  
+  func display(error: Error) {
+    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+    present(alert, animated: true, completion: nil)
+  }
 }
