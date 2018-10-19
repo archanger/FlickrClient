@@ -48,6 +48,7 @@ extension FeedsPhotoCollectionResponse: Decodable {
     let response = try Response(from: decoder)
     photos = response.photos?.photo.map {
       FeedsPhoto(
+        id: $0.id,
         avatarURL: $0.avatarURL(),
         userName: $0.ownername,
         imageURL: URL(string: $0.urlZ),

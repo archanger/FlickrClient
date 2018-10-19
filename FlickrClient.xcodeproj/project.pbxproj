@@ -14,6 +14,9 @@
 		0EA1EF82217A65EF0056CCA4 /* ResponseStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */; };
 		0EA1EF86217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF85217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift */; };
 		0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF87217A6BF50056CCA4 /* Action.swift */; };
+		0EA1EF8B217A71A70056CCA4 /* CommentsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */; };
+		0EA1EF8D217A72200056CCA4 /* CommentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8C217A72200056CCA4 /* CommentsListViewController.swift */; };
+		0EA1EF8F217A725F0056CCA4 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8E217A725F0056CCA4 /* FeedRouter.swift */; };
 		0EDE8355217668F40089CB13 /* FeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE8354217668F40089CB13 /* FeedFactory.swift */; };
 		0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835621766A360089CB13 /* FeedViewController.swift */; };
 		0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835A21766BD30089CB13 /* FeedCell.swift */; };
@@ -44,6 +47,9 @@
 		0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStats.swift; sourceTree = "<group>"; };
 		0EA1EF85217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsPhotoCollectionResponse.swift; sourceTree = "<group>"; };
 		0EA1EF87217A6BF50056CCA4 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListFactory.swift; sourceTree = "<group>"; };
+		0EA1EF8C217A72200056CCA4 /* CommentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommentsListViewController.swift; path = /Users/kirillchuyanov/Projects/FlickrClient/FlickrClient/CommentsList/CommentsListViewController.swift; sourceTree = "<absolute>"; };
+		0EA1EF8E217A725F0056CCA4 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
 		0EDE8354217668F40089CB13 /* FeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFactory.swift; sourceTree = "<group>"; };
 		0EDE835621766A360089CB13 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0EDE835A21766BD30089CB13 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDE8364217676810089CB13 /* Core */,
+				0EA1EF89217A71760056CCA4 /* CommentsList */,
 				0EDE8353217668E20089CB13 /* Feed */,
 				0E6D0E8221765FDA00623EE3 /* AppDelegate.swift */,
 				0E6D0E8921765FDC00623EE3 /* Assets.xcassets */,
@@ -111,6 +118,15 @@
 				0E6D0E8E21765FDC00623EE3 /* Info.plist */,
 			);
 			path = FlickrClient;
+			sourceTree = "<group>";
+		};
+		0EA1EF89217A71760056CCA4 /* CommentsList */ = {
+			isa = PBXGroup;
+			children = (
+				0EA1EF8C217A72200056CCA4 /* CommentsListViewController.swift */,
+				0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */,
+			);
+			path = CommentsList;
 			sourceTree = "<group>";
 		};
 		0EDE8353217668E20089CB13 /* Feed */ = {
@@ -123,6 +139,7 @@
 				0EDE83672176797D0089CB13 /* FeedPresenter.swift */,
 				0EDE836F21767E5A0089CB13 /* FeedInteractor.swift */,
 				0EDE837E217908820089CB13 /* FeedService.swift */,
+				0EA1EF8E217A725F0056CCA4 /* FeedRouter.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -319,6 +336,7 @@
 				0EDE838121790B750089CB13 /* AbstractNetworkProvider.swift in Sources */,
 				0EA1EF82217A65EF0056CCA4 /* ResponseStats.swift in Sources */,
 				0EDE83662176769E0089CB13 /* CustomViewController.swift in Sources */,
+				0EA1EF8F217A725F0056CCA4 /* FeedRouter.swift in Sources */,
 				0EDE83722177C2CB0089CB13 /* IconedInfoView.swift in Sources */,
 				0EDE83682176797D0089CB13 /* FeedPresenter.swift in Sources */,
 				0EDE8355217668F40089CB13 /* FeedFactory.swift in Sources */,
@@ -328,11 +346,13 @@
 				0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */,
 				0EDE836C21767B510089CB13 /* UITableView+Extensions.swift in Sources */,
 				0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */,
+				0EA1EF8D217A72200056CCA4 /* CommentsListViewController.swift in Sources */,
 				0EDE8363217675BF0089CB13 /* FeedPresentationModel.swift in Sources */,
 				0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */,
 				0EDE836E21767CA00089CB13 /* FeedPresentationModel+Extensions.swift in Sources */,
 				0E6D0E8321765FDA00623EE3 /* AppDelegate.swift in Sources */,
 				0EDE837F217908820089CB13 /* FeedService.swift in Sources */,
+				0EA1EF8B217A71A70056CCA4 /* CommentsListFactory.swift in Sources */,
 				0EA1EF86217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

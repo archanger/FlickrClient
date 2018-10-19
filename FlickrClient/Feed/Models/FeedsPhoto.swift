@@ -9,6 +9,7 @@
 import Foundation
 
 struct FeedsPhoto {
+  let id: String
   let avatarURL: URL?
   let userName: String
   let imageURL: URL?

@@ -11,8 +11,8 @@ import UIKit
 final class FeedFactory {
   func create() -> UIViewController {
     let vc = FeedViewController()
-    
-    let presenter = FeedPresenter()
+    let router = FeedRouter(rootViewController: vc)
+    let presenter = FeedPresenter(router: router)
     let interactor = FeedInteractor(
       presenter: presenter,
       feedService: FeedService(networkProvider: NetworkProvider())
