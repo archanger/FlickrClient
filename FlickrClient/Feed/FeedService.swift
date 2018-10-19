@@ -14,59 +14,32 @@ final class FeedService {
   }
   
   private let _networkProvider: AbstractNetworkProvider
+  private let _entrypoint = "https://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=55ab2f1fa8ca6c25c2d68ac1b46a1ecf&format=json&extras=description,count_faves,count_comments,owner_name,url_z,views,icon_server&nojsoncallback=1"
 }
 
 extension FeedService: FeedServiceProtocol {
   func receiveList(onComlete: @escaping ([FeedsPhoto]) -> Void, onFailure: @escaping (Error) -> Void) {
     
-    let result = [
-      FeedsPhoto(
-        avatarURL: URL(string: "https://res.grouple.co/static/no_avatar_small.png"),
-        userName: "User1",
-        imageURL: URL(string: "https://theme.zdassets.com/theme_assets/14924/4ae977d85a3cd2600e7fccd7d01498b270650559.png"),
-        title: "Title1",
-        favoritesCount: "100",
-        viewsCount: "50",
-        commentsCount: "4"
-      ),
-      FeedsPhoto(
-        avatarURL: URL(string: "https://res.grouple.co/static/no_avatar_small.png"),
-        userName: "User2",
-        imageURL: URL(string: "https://theme.zdassets.com/theme_assets/14924/4ae977d85a3cd2600e7fccd7d01498b270650559.png"),
-        title: "Title2",
-        favoritesCount: "102",
-        viewsCount: "52",
-        commentsCount: "42"
-      ),
-      FeedsPhoto(
-        avatarURL: URL(string: "https://res.grouple.co/static/no_avatar_small.png"),
-        userName: "User3",
-        imageURL: URL(string: "https://theme.zdassets.com/theme_assets/14924/4ae977d85a3cd2600e7fccd7d01498b270650559.png"),
-        title: "Title3",
-        favoritesCount: "103",
-        viewsCount: "53",
-        commentsCount: "403"
-      ),
-      FeedsPhoto(
-        avatarURL: URL(string: "https://res.grouple.co/static/no_avatar_small.png"),
-        userName: "User4",
-        imageURL: URL(string: "https://theme.zdassets.com/theme_assets/14924/4ae977d85a3cd2600e7fccd7d01498b270650559.png"),
-        title: "Title4",
-        favoritesCount: "1004",
-        viewsCount: "5004",
-        commentsCount: "4201"
-      ),
-      FeedsPhoto(
-        avatarURL: URL(string: "https://res.grouple.co/static/no_avatar_small.png"),
-        userName: "User5",
-        imageURL: URL(string: "https://theme.zdassets.com/theme_assets/14924/4ae977d85a3cd2600e7fccd7d01498b270650559.png"),
-        title: "Title5",
-        favoritesCount: "1000002",
-        viewsCount: "505",
-        commentsCount: "41214"
-      )
-    ]
+    guard let url = URL(string: _entrypoint) else {
+      onFailure(NSError(domain: "", code: 108, userInfo: [NSLocalizedDescriptionKey: "Wrong URL"]))
+      return
+    }
     
-    onComlete(result)
+    _networkProvider.makeGetRequest(
+      with: url,
+      onSuccess: { (data: FeedsPhotoCollectionResponse) in
+          guard data.stats.stat == "ok" else {
+            onFailure(NSError(domain: "", code: 108, userInfo: [NSLocalizedDescriptionKey: data.stats.message ?? ""]))
+            return
+          }
+          
+          guard let photos = data.photos else {
+            onFailure(NSError(domain: "", code: 107, userInfo: [NSLocalizedDescriptionKey: "Empty Collection"]))
+            return
+          }
+          onComlete(photos)
+      },
+      onError: onFailure
+    )
   }
 }

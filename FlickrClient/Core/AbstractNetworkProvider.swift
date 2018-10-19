@@ -32,8 +32,10 @@ final class NetworkProvider: AbstractNetworkProvider {
         return
       }
       
+      let decoder = JSONDecoder()
+      decoder.keyDecodingStrategy = .convertFromSnakeCase
       do {
-        let result = try JSONDecoder().decode(ResponseType.self, from: data)
+        let result = try decoder.decode(ResponseType.self, from: data)
         onSuccess(result)
       } catch {
         onError(error)

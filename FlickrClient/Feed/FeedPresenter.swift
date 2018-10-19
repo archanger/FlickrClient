@@ -47,6 +47,6 @@ extension FeedPresenter: FeedPresenterProtocol {
   }
   
   func failedLoading(with error: Error) {
-    
+    print(error)
   }
 }
