@@ -39,9 +39,9 @@ extension FeedPresenter: FeedPresenterProtocol {
       FeedPresentationModel(
         avatarModel: .init(imageURL: $0.avatarURL, name: $0.userName),
         mainPhotoModel: .init(imageURL: $0.imageURL, title: $0.title),
-        favoritesCountModel: .init(icon: #imageLiteral(resourceName: "thumb_up"), text: $0.favoritesCount),
+        favoritesCountModel: .init(icon: #imageLiteral(resourceName: "thumb_up"), text: $0.favoritesCount, action: { print("favs") }),
         viewsCountModel: .init(icon: #imageLiteral(resourceName: "eye"), text: $0.viewsCount),
-        commentsCountModel: .init(icon: #imageLiteral(resourceName: "comment"), text: $0.commentsCount)
+        commentsCountModel: .init(icon: #imageLiteral(resourceName: "comment"), text: $0.commentsCount, action: { print("comments") })
       )
     })
     view?.reloadData()

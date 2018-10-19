@@ -13,6 +13,7 @@
 		0E6D0E8D21765FDC00623EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D0E8B21765FDC00623EE3 /* LaunchScreen.storyboard */; };
 		0EA1EF82217A65EF0056CCA4 /* ResponseStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */; };
 		0EA1EF86217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF85217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift */; };
+		0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF87217A6BF50056CCA4 /* Action.swift */; };
 		0EDE8355217668F40089CB13 /* FeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE8354217668F40089CB13 /* FeedFactory.swift */; };
 		0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835621766A360089CB13 /* FeedViewController.swift */; };
 		0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835A21766BD30089CB13 /* FeedCell.swift */; };
@@ -42,6 +43,7 @@
 		0E6D0E8E21765FDC00623EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStats.swift; sourceTree = "<group>"; };
 		0EA1EF85217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsPhotoCollectionResponse.swift; sourceTree = "<group>"; };
+		0EA1EF87217A6BF50056CCA4 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		0EDE8354217668F40089CB13 /* FeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFactory.swift; sourceTree = "<group>"; };
 		0EDE835621766A360089CB13 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0EDE835A21766BD30089CB13 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				0EDE836B21767B510089CB13 /* UITableView+Extensions.swift */,
 				0EDE838021790B750089CB13 /* AbstractNetworkProvider.swift */,
 				0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */,
+				0EA1EF87217A6BF50056CCA4 /* Action.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDE8360217673050089CB13 /* FeedView.swift in Sources */,
+				0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */,
 				0EDE836A21767AD90089CB13 /* CellPresentableModel.swift in Sources */,
 				0EDE837021767E5A0089CB13 /* FeedInteractor.swift in Sources */,
 				0EDE838121790B750089CB13 /* AbstractNetworkProvider.swift in Sources */,

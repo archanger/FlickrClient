@@ -12,6 +12,13 @@ extension IconedInfoView {
   struct Model {
     let icon: UIImage
     let text: String
+    let action: Action?
+    
+    init(icon: UIImage, text: String, action: Action? = nil) {
+      self.icon = icon
+      self.text = text
+      self.action = action
+    }
   }
 }
 
@@ -19,10 +26,13 @@ class IconedInfoView: UIView {
   func update(model: Model) {
     iconView.image = model.icon
     textLabel.text = model.text
+    _action = model.action
   }
   
   override init(frame: CGRect) {
     super.init(frame: frame)
+    
+    addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(performAction)))
     
     addSubview(iconView)
     addSubview(textLabel)
@@ -43,6 +53,11 @@ class IconedInfoView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
+  @objc private func performAction() {
+    _action?()
+  }
+  
   private let iconView = UIImageView()
   private let textLabel = UILabel()
+  private var _action: Action?
 }
