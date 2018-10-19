@@ -26,6 +26,10 @@ class FeedMainPhotoView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
+    imageView.contentMode = .scaleAspectFill
+    imageView.clipsToBounds = true
+    titleLabel.numberOfLines = 0
+    
     addSubview(imageView)
     addSubview(contentView)
     contentView.addSubview(titleLabel)

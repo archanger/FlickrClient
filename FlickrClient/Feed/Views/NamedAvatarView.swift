@@ -25,6 +25,8 @@ class NamedAvatarView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
+    avatarImageView.contentMode = .scaleAspectFill
+    
     addSubview(avatarImageView)
     addSubview(nameLabel)
     
