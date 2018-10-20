@@ -17,7 +17,6 @@
 		0EA1EF8B217A71A70056CCA4 /* CommentsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */; };
 		0EA1EF8F217A725F0056CCA4 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8E217A725F0056CCA4 /* FeedRouter.swift */; };
 		0EDE8355217668F40089CB13 /* FeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE8354217668F40089CB13 /* FeedFactory.swift */; };
-		0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835621766A360089CB13 /* FeedViewController.swift */; };
 		0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835A21766BD30089CB13 /* FeedCell.swift */; };
 		0EDE8360217673050089CB13 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835F217673050089CB13 /* FeedView.swift */; };
 		0EDE8363217675BF0089CB13 /* FeedPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE8362217675BF0089CB13 /* FeedPresentationModel.swift */; };
@@ -35,7 +34,6 @@
 		0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE837C217903910089CB13 /* FeedsPhoto.swift */; };
 		0EDE837F217908820089CB13 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE837E217908820089CB13 /* FeedService.swift */; };
 		0EDE838121790B750089CB13 /* AbstractNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE838021790B750089CB13 /* AbstractNetworkProvider.swift */; };
-		ED97CF4E217B403F00C1E54E /* CommentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */; };
 		ED97CF51217B409B00C1E54E /* CommentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF50217B409B00C1E54E /* CommentsListView.swift */; };
 		ED97CF53217B416500C1E54E /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF52217B416500C1E54E /* TableSource.swift */; };
 		ED97CF56217B425100C1E54E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF55217B425100C1E54E /* ListViewController.swift */; };
@@ -49,7 +47,6 @@
 		ED97CF68217B77E200C1E54E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF67217B77E200C1E54E /* Comment.swift */; };
 		ED97CF6A217B78CA00C1E54E /* CommentsCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF69217B78CA00C1E54E /* CommentsCollectionResponse.swift */; };
 		ED97CF6C217B86C600C1E54E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */; };
-		ED97CF6F217B9D5400C1E54E /* FavesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF6E217B9D5400C1E54E /* FavesListViewController.swift */; };
 		ED97CF71217B9DB600C1E54E /* FavesListFacroty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF70217B9DB600C1E54E /* FavesListFacroty.swift */; };
 		ED97CF73217BA02900C1E54E /* FavesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF72217BA02900C1E54E /* FavesListInteractor.swift */; };
 		ED97CF76217BA10600C1E54E /* Fave.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF75217BA10600C1E54E /* Fave.swift */; };
@@ -59,6 +56,11 @@
 		ED97CF80217BA2BB00C1E54E /* FavePresentationModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF7F217BA2BB00C1E54E /* FavePresentationModel+Extensions.swift */; };
 		ED97CF82217BA5E800C1E54E /* FavesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF81217BA5E800C1E54E /* FavesService.swift */; };
 		ED97CF84217BA6E100C1E54E /* FavesCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF83217BA6E100C1E54E /* FavesCollectionResponse.swift */; };
+		ED97CF86217BB1AF00C1E54E /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF85217BB1AF00C1E54E /* RoundedImageView.swift */; };
+		ED97CF88217BB48900C1E54E /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF87217BB48900C1E54E /* GradientView.swift */; };
+		ED97CF8A217BB6E200C1E54E /* GlobalAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF89217BB6E200C1E54E /* GlobalAppearance.swift */; };
+		ED97CF8C217BBB1F00C1E54E /* AvatarRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF8B217BBB1F00C1E54E /* AvatarRepresentable.swift */; };
+		ED97CF8E217BBBFC00C1E54E /* UsernameRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF8D217BBBFC00C1E54E /* UsernameRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +75,6 @@
 		0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListFactory.swift; sourceTree = "<group>"; };
 		0EA1EF8E217A725F0056CCA4 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
 		0EDE8354217668F40089CB13 /* FeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFactory.swift; sourceTree = "<group>"; };
-		0EDE835621766A360089CB13 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		0EDE835A21766BD30089CB13 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		0EDE835F217673050089CB13 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		0EDE8362217675BF0089CB13 /* FeedPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresentationModel.swift; sourceTree = "<group>"; };
@@ -94,7 +95,6 @@
 		1AA449519ADF93213C74F775 /* Pods-FlickrClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.release.xcconfig"; sourceTree = "<group>"; };
 		316E7DB3F54C1B695DF6E017 /* Pods_FlickrClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC00A0B98C8C808BC8B3A276 /* Pods-FlickrClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.debug.xcconfig"; sourceTree = "<group>"; };
-		ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsListViewController.swift; sourceTree = "<group>"; };
 		ED97CF50217B409B00C1E54E /* CommentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListView.swift; sourceTree = "<group>"; };
 		ED97CF52217B416500C1E54E /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
 		ED97CF55217B425100C1E54E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +108,6 @@
 		ED97CF67217B77E200C1E54E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		ED97CF69217B78CA00C1E54E /* CommentsCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCollectionResponse.swift; sourceTree = "<group>"; };
 		ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
-		ED97CF6E217B9D5400C1E54E /* FavesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesListViewController.swift; sourceTree = "<group>"; };
 		ED97CF70217B9DB600C1E54E /* FavesListFacroty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesListFacroty.swift; sourceTree = "<group>"; };
 		ED97CF72217BA02900C1E54E /* FavesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesListInteractor.swift; sourceTree = "<group>"; };
 		ED97CF75217BA10600C1E54E /* Fave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fave.swift; sourceTree = "<group>"; };
@@ -118,6 +117,11 @@
 		ED97CF7F217BA2BB00C1E54E /* FavePresentationModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavePresentationModel+Extensions.swift"; sourceTree = "<group>"; };
 		ED97CF81217BA5E800C1E54E /* FavesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesService.swift; sourceTree = "<group>"; };
 		ED97CF83217BA6E100C1E54E /* FavesCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesCollectionResponse.swift; sourceTree = "<group>"; };
+		ED97CF85217BB1AF00C1E54E /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		ED97CF87217BB48900C1E54E /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		ED97CF89217BB6E200C1E54E /* GlobalAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalAppearance.swift; sourceTree = "<group>"; };
+		ED97CF8B217BBB1F00C1E54E /* AvatarRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarRepresentable.swift; sourceTree = "<group>"; };
+		ED97CF8D217BBBFC00C1E54E /* UsernameRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,8 +159,8 @@
 		0E6D0E8121765FDA00623EE3 /* FlickrClient */ = {
 			isa = PBXGroup;
 			children = (
-				ED97CF6D217B9D2900C1E54E /* FavesList */,
 				0EDE8364217676810089CB13 /* Core */,
+				ED97CF6D217B9D2900C1E54E /* FavesList */,
 				0EA1EF89217A71760056CCA4 /* CommentsList */,
 				0EDE8353217668E20089CB13 /* Feed */,
 				0E6D0E8221765FDA00623EE3 /* AppDelegate.swift */,
@@ -172,7 +176,6 @@
 			children = (
 				ED97CF66217B77B500C1E54E /* Models */,
 				ED97CF4F217B407600C1E54E /* Views */,
-				ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */,
 				0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */,
 				ED97CF59217B53A200C1E54E /* CommentsListPresenter.swift */,
 				ED97CF62217B6FD500C1E54E /* CommentsListInteractor.swift */,
@@ -187,7 +190,6 @@
 				0EDE837B217903770089CB13 /* Models */,
 				0EDE835E2176729E0089CB13 /* Views */,
 				0EDE8354217668F40089CB13 /* FeedFactory.swift */,
-				0EDE835621766A360089CB13 /* FeedViewController.swift */,
 				0EDE83672176797D0089CB13 /* FeedPresenter.swift */,
 				0EDE836F21767E5A0089CB13 /* FeedInteractor.swift */,
 				0EDE837E217908820089CB13 /* FeedService.swift */,
@@ -232,6 +234,11 @@
 				0EA1EF87217A6BF50056CCA4 /* Action.swift */,
 				ED97CF52217B416500C1E54E /* TableSource.swift */,
 				ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */,
+				ED97CF85217BB1AF00C1E54E /* RoundedImageView.swift */,
+				ED97CF87217BB48900C1E54E /* GradientView.swift */,
+				ED97CF89217BB6E200C1E54E /* GlobalAppearance.swift */,
+				ED97CF8B217BBB1F00C1E54E /* AvatarRepresentable.swift */,
+				ED97CF8D217BBBFC00C1E54E /* UsernameRepresentable.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -304,7 +311,6 @@
 			children = (
 				ED97CF79217BA1FC00C1E54E /* Views */,
 				ED97CF74217BA0EC00C1E54E /* Model */,
-				ED97CF6E217B9D5400C1E54E /* FavesListViewController.swift */,
 				ED97CF70217B9DB600C1E54E /* FavesListFacroty.swift */,
 				ED97CF72217BA02900C1E54E /* FavesListInteractor.swift */,
 				ED97CF77217BA17000C1E54E /* FavesListPresenter.swift */,
@@ -463,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDE8360217673050089CB13 /* FeedView.swift in Sources */,
+				ED97CF86217BB1AF00C1E54E /* RoundedImageView.swift in Sources */,
 				0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */,
 				ED97CF63217B6FD500C1E54E /* CommentsListInteractor.swift in Sources */,
 				0EDE836A21767AD90089CB13 /* CellPresentableModel.swift in Sources */,
@@ -483,19 +490,20 @@
 				0EDE83742177C5170089CB13 /* NamedAvatarView.swift in Sources */,
 				0EDE83782177C99F0089CB13 /* FeedInfoView.swift in Sources */,
 				0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */,
+				ED97CF8C217BBB1F00C1E54E /* AvatarRepresentable.swift in Sources */,
+				ED97CF88217BB48900C1E54E /* GradientView.swift in Sources */,
 				0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */,
+				ED97CF8E217BBBFC00C1E54E /* UsernameRepresentable.swift in Sources */,
 				ED97CF7E217BA23600C1E54E /* FavePresentationModel.swift in Sources */,
 				ED97CF6C217B86C600C1E54E /* DateFormatter+Extensions.swift in Sources */,
 				ED97CF84217BA6E100C1E54E /* FavesCollectionResponse.swift in Sources */,
 				ED97CF76217BA10600C1E54E /* Fave.swift in Sources */,
 				0EDE836C21767B510089CB13 /* UITableView+Extensions.swift in Sources */,
-				ED97CF4E217B403F00C1E54E /* CommentsListViewController.swift in Sources */,
 				0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */,
+				ED97CF8A217BB6E200C1E54E /* GlobalAppearance.swift in Sources */,
 				0EDE8363217675BF0089CB13 /* FeedPresentationModel.swift in Sources */,
-				0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */,
 				ED97CF7B217BA21500C1E54E /* FaveCell.swift in Sources */,
 				ED97CF5A217B53A200C1E54E /* CommentsListPresenter.swift in Sources */,
-				ED97CF6F217B9D5400C1E54E /* FavesListViewController.swift in Sources */,
 				ED97CF61217B649A00C1E54E /* CommentPresentationModel+Extensions.swift in Sources */,
 				0EDE836E21767CA00089CB13 /* FeedPresentationModel+Extensions.swift in Sources */,
 				0E6D0E8321765FDA00623EE3 /* AppDelegate.swift in Sources */,
