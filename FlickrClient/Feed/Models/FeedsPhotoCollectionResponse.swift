@@ -25,8 +25,10 @@ extension FeedsPhotoCollectionResponse: Decodable {
       
       struct ResponsePhoto: Decodable {
         let id: String
+        let farm: Int
+        let server: String
         let ownername: String
-        let urlZ: String
+        let urlZ: String?
         let title: String
         let countFaves: String
         let countComments: String
@@ -34,11 +36,19 @@ extension FeedsPhotoCollectionResponse: Decodable {
         let iconserver: String
         let iconfarm: Int
         let owner: String
+        let originalformat: String?
+        let originalsecret: String?
         
         func avatarURL() -> URL? {
           return (Int(iconserver) ?? 0) > 0
             ? URL(string: "https://farm\(iconfarm).staticflickr.com/\(iconserver)/buddyicons/\(owner).jpg")
             : URL(string: "https://www.flickr.com/images/buddyicon.gif")
+        }
+        
+        func imageURL() -> URL? {
+          return urlZ != nil
+            ? URL(string: urlZ!)
+            : URL(string: "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(originalsecret ?? "")_o.\(originalformat ?? "")")
         }
       }
     }
@@ -51,7 +61,7 @@ extension FeedsPhotoCollectionResponse: Decodable {
         id: $0.id,
         avatarURL: $0.avatarURL(),
         userName: $0.ownername,
-        imageURL: URL(string: $0.urlZ),
+        imageURL: $0.imageURL(),
         title: $0.title,
         favoritesCount: $0.countFaves,
         viewsCount: $0.views,
