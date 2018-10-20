@@ -14,7 +14,8 @@ protocol FeedViewProtocol: class {
 }
 
 protocol FeedRouterProtocol {
-  func openCommentsList(for photoId: String)
+  func openCommentsList(for photoID: String)
+  func openFavesList(for photoID: String)
 }
 
 final class FeedPresenter: NSObject {
@@ -29,9 +30,25 @@ final class FeedPresenter: NSObject {
     return FeedPresentationModel(
       avatarModel: .init(imageURL: entity.avatarURL, name: entity.userName),
       mainPhotoModel: .init(imageURL: entity.imageURL, title: entity.title),
-      favoritesCountModel: .init(icon: #imageLiteral(resourceName: "thumb_up"), text: entity.favoritesCount, action: { print("favs") }),
+      favoritesCountModel: .init(
+        icon: #imageLiteral(resourceName: "thumb_up"),
+        text: entity.favoritesCount,
+        action: { [weak self] in
+          if (Int64(entity.favoritesCount) ?? 0) > 0 {
+            self?._router.openFavesList(for: entity.id)
+          }
+        }
+      ),
       viewsCountModel: .init(icon: #imageLiteral(resourceName: "eye"), text: entity.viewsCount),
-      commentsCountModel: .init(icon: #imageLiteral(resourceName: "comment"), text: entity.commentsCount, action: { [weak self] in self?._router.openCommentsList(for: entity.id) })
+      commentsCountModel: .init(
+        icon: #imageLiteral(resourceName: "comment"),
+        text: entity.commentsCount,
+        action: { [weak self] in
+          if (Int64(entity.commentsCount) ?? 0) > 0 {
+            self?._router.openCommentsList(for: entity.id)
+          }
+        }
+      )
     )
   }
   

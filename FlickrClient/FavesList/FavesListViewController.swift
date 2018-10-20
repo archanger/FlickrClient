@@ -1,29 +1,30 @@
 //
-//  CommentsListViewController.swift
-//  
+//  FavesListViewController.swift
+//  FlickrClient
 //
-//  Created by Кирилл Чуянов on 19/10/2018.
+//  Created by Кирилл Чуянов on 20/10/2018.
+//  Copyright © 2018 Kirill Chuyanov. All rights reserved.
 //
 
 import UIKit
 
-protocol CommentsListInteractorProtocol {
+protocol FavesListInteractorProtocol {
   func loadData()
 }
 
-final class CommentsListViewController: ListViewController {
-  var interactor: CommentsListInteractorProtocol!
+final class FavesListViewController: ListViewController {
+  var interactor: FavesListInteractorProtocol!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    title = "Comments"
+    title = "Marked as \"Favorite\""
     
     interactor.loadData()
   }
 }
 
-extension CommentsListViewController: CommentsListViewProtocol {
+extension FavesListViewController: CommentsListViewProtocol {
   func reloadData() {
     customView.reloadData()
   }

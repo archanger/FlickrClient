@@ -17,8 +17,13 @@ final class FeedRouter {
 }
 
 extension FeedRouter: FeedRouterProtocol {
-  func openCommentsList(for photoId: String) {
-    let comments = CommentsListFactory().create(for: photoId)
+  func openCommentsList(for photoID: String) {
+    let comments = CommentsListFactory().create(for: photoID)
     _rootViewController?.navigationController?.pushViewController(comments, animated: true)
+  }
+  
+  func openFavesList(for photoID: String) {
+    let faves = FavesListFactory().create(for: photoID)
+    _rootViewController?.navigationController?.pushViewController(faves, animated: true)
   }
 }

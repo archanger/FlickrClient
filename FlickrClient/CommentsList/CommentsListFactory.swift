@@ -19,8 +19,8 @@ final class CommentsListFactory {
       service: CommentsService(networkProvider: NetworkProvider())
     )
     vc.interactor = interactor
-    vc.setTableSource(presenter)
     presenter.view = vc
+    vc.setTableSource(presenter)
     return vc
   }
 }
