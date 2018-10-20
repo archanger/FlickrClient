@@ -34,7 +34,6 @@ final class FeedMainPhotoView: UIView {
     addSubview(contentView)
     contentView.addSubview(titleLabel)
     
-    contentView.backgroundColor = .black
     titleLabel.textColor = .white
     
     imageView.snp.makeConstraints { make in
@@ -57,6 +56,6 @@ final class FeedMainPhotoView: UIView {
   }
   
   private let imageView = UIImageView()
-  private let contentView = UIView()
+  private let contentView = GradientView()
   private let titleLabel = UILabel()
 }
