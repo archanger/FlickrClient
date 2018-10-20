@@ -33,7 +33,7 @@ final class FavesListInteractor {
   private let _photoID: String
 }
 
-extension FavesListInteractor: FavesListInteractorProtocol {
+extension FavesListInteractor: ListInteractorProtocol {
   func loadData() {
     _service.receiveList(
       for: _photoID,

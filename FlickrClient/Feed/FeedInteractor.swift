@@ -27,8 +27,8 @@ final class FeedInteractor {
   private var _feedService: FeedServiceProtocol
 }
 
-extension FeedInteractor: FeedInteractorProtocol {
-  func loadDta() {
+extension FeedInteractor: ListInteractorProtocol {
+  func loadData() {
     _feedService.receiveList(
       onComlete: { [weak self] feed in
         DispatchQueue.main.async {

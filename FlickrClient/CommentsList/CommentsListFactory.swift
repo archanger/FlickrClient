@@ -10,7 +10,8 @@ import UIKit
 
 final class CommentsListFactory {
   func create(for photoId: String) -> UIViewController {
-    let vc = CommentsListViewController()
+    let vc = ListViewController()
+    vc.title = "Comments"
     let presenter = CommentsListPresenter()
     let interactor = CommentsListInteractor(
       photoID: photoId,

@@ -8,13 +8,8 @@
 
 import UIKit
 
-protocol CommentsListViewProtocol: class {
-  func reloadData()
-  func display(error: Error)
-}
-
 final class CommentsListPresenter: NSObject {
-  weak var view: CommentsListViewProtocol?
+  weak var view: ListViewProtocol?
   
   private var _models: [Comment] = []
 }

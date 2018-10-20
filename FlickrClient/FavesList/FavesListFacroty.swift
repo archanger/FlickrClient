@@ -10,7 +10,8 @@ import UIKit
 
 final class FavesListFactory {
   func create(for photoID: String) -> UIViewController {
-    let vc = FavesListViewController()
+    let vc = ListViewController()
+    vc.title = "Marked as \"Favorite\""
     let presenter = FavesListPresenter()
     let interactor = FavesListInteractor(
       photoID: photoID,

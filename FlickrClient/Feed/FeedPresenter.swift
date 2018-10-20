@@ -8,18 +8,13 @@
 
 import UIKit
 
-protocol FeedViewProtocol: class {
-  func reloadData()
-  func display(error: Error)
-}
-
 protocol FeedRouterProtocol {
   func openCommentsList(for photoID: String)
   func openFavesList(for photoID: String)
 }
 
 final class FeedPresenter: NSObject {
-  weak var view: FeedViewProtocol?
+  weak var view: ListViewProtocol?
   
   init(router: FeedRouterProtocol) {
     _router = router

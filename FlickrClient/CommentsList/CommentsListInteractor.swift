@@ -33,7 +33,7 @@ final class CommentsListInteractor {
   private let _photoID: String
 }
 
-extension CommentsListInteractor: CommentsListInteractorProtocol {
+extension CommentsListInteractor: ListInteractorProtocol {
   func loadData() {
     _service.receiveList(
       for: _photoID, 

@@ -8,13 +8,8 @@
 
 import UIKit
 
-protocol FavesListViewProtocol: class {
-  func reloadData()
-  func display(error: Error)
-}
-
 final class FavesListPresenter: NSObject {
-  weak var view: CommentsListViewProtocol?
+  weak var view: ListViewProtocol?
   
   private var _models: [Fave] = []
 }

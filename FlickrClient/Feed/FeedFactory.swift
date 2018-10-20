@@ -10,7 +10,8 @@ import UIKit
 
 final class FeedFactory {
   func create() -> UIViewController {
-    let vc = FeedViewController()
+    let vc = ListViewController()
+    vc.title = "Photos"
     let router = FeedRouter(rootViewController: vc)
     let presenter = FeedPresenter(router: router)
     let interactor = FeedInteractor(
@@ -19,8 +20,8 @@ final class FeedFactory {
     )
     
     vc.interactor = interactor
-    vc.setTableSource(presenter)
     presenter.view = vc
+    vc.setTableSource(presenter)
     return vc
   }
 }
