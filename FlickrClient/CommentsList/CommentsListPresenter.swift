@@ -36,3 +36,13 @@ extension CommentsListPresenter: TableSource {
     return _models[indexPath.row].tableView(tableView, cellForRowAt: indexPath)
   }
 }
+
+extension CommentsListPresenter: CommentsListPresenterProtocol {
+  func failedLoading(with error: Error) {
+    view?.display(error: error)
+  }
+  
+  func dataLoaded() {
+    view?.reloadData()
+  }
+}

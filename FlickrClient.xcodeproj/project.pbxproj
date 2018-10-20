@@ -44,6 +44,7 @@
 		ED97CF5C217B542D00C1E54E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF5B217B542D00C1E54E /* CommentCell.swift */; };
 		ED97CF5F217B550200C1E54E /* CommentPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF5E217B550200C1E54E /* CommentPresentationModel.swift */; };
 		ED97CF61217B649A00C1E54E /* CommentPresentationModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF60217B649A00C1E54E /* CommentPresentationModel+Extensions.swift */; };
+		ED97CF63217B6FD500C1E54E /* CommentsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF62217B6FD500C1E54E /* CommentsListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		ED97CF5B217B542D00C1E54E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		ED97CF5E217B550200C1E54E /* CommentPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPresentationModel.swift; sourceTree = "<group>"; };
 		ED97CF60217B649A00C1E54E /* CommentPresentationModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentPresentationModel+Extensions.swift"; sourceTree = "<group>"; };
+		ED97CF62217B6FD500C1E54E /* CommentsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */,
 				0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */,
 				ED97CF59217B53A200C1E54E /* CommentsListPresenter.swift */,
+				ED97CF62217B6FD500C1E54E /* CommentsListInteractor.swift */,
 			);
 			path = CommentsList;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 			files = (
 				0EDE8360217673050089CB13 /* FeedView.swift in Sources */,
 				0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */,
+				ED97CF63217B6FD500C1E54E /* CommentsListInteractor.swift in Sources */,
 				0EDE836A21767AD90089CB13 /* CellPresentableModel.swift in Sources */,
 				0EDE837021767E5A0089CB13 /* FeedInteractor.swift in Sources */,
 				ED97CF51217B409B00C1E54E /* CommentsListView.swift in Sources */,

@@ -7,11 +7,28 @@
 
 import UIKit
 
+protocol CommentsListInteractorProtocol {
+  func loadData()
+}
+
 class CommentsListViewController: ListViewController {
+  var interactor: CommentsListInteractorProtocol!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     title = "Comments"
+    
+    interactor.loadData()
+  }
+}
+
+extension CommentsListViewController: CommentsListViewProtocol {
+  func reloadData() {
+    customView.reloadData()
+  }
+  
+  func display(error: Error) {
+    print(error.localizedDescription)
   }
 }
