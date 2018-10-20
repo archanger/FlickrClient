@@ -27,6 +27,7 @@ class ListView: UIView {
     backgroundColor = .white
     
     _tableView.allowsSelection = false
+    _tableView.tableFooterView = UIView()
     
     addSubview(_tableView)
     _tableView.snp.makeConstraints { make in
