@@ -12,4 +12,5 @@ struct Fave {
   let id: String
   let username: String
   let date: TimeInterval
+  let avatarURL: URL?
 }

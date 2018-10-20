@@ -47,7 +47,13 @@ extension FavesListPresenter: FavesListPresenterProtocol {
 private extension Fave {
   var presentationModel: FavePresentationModel {
     return FavePresentationModel(
-      username: username
+      username: username,
+      avatarURL: avatarURL,
+      date: DateFormatter.localizedString(
+        from: Date(timeIntervalSince1970: date),
+        dateStyle: .medium,
+        timeStyle: .short
+      )
     )
   }
 }

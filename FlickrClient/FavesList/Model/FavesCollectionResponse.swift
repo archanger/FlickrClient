@@ -52,7 +52,8 @@ extension FavesCollectionResponse: Decodable {
       Fave(
         id: $0.nsid,
         username: $0.name(),
-        date: TimeInterval($0.favedate) ?? 0
+        date: TimeInterval($0.favedate) ?? 0,
+        avatarURL: $0.avatarURL()
       )
     }
     stats = response.responseStats

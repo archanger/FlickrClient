@@ -10,4 +10,6 @@ import Foundation
 
 struct FavePresentationModel {
   let username: String
+  let avatarURL: URL?
+  let date: String
 }

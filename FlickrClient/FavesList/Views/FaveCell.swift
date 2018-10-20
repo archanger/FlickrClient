@@ -9,7 +9,51 @@
 import UIKit
 
 final class FaveCell: UITableViewCell {
-  func update(model: FavePresentationModel) {
-    textLabel?.text = model.username
+  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    super.init(style: .default, reuseIdentifier: reuseIdentifier)
+    
+    addSubview(avatarView)
+    addSubview(nameLabel)
+    addSubview(dateLabel)
+    
+    avatarView.snp.makeConstraints { (make) in
+      make.top.leading.equalToSuperview().inset(8)
+      make.height.width.equalTo(44)
+      make.bottom.lessThanOrEqualToSuperview().inset(8)
+    }
+    
+    nameLabel.snp.makeConstraints { (make) in
+      make.top.equalTo(avatarView)
+      make.leading.equalTo(avatarView.snp.trailing).offset(8)
+      make.trailing.lessThanOrEqualToSuperview().inset(8)
+    }
+    
+    dateLabel.snp.makeConstraints { (make) in
+      make.leading.equalTo(nameLabel)
+      make.top.equalTo(nameLabel.snp.bottom).offset(8)
+      make.bottom.lessThanOrEqualToSuperview().inset(8)
+    }
   }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  func update(model: FavePresentationModel) {
+    avatarView.kf.setImage(with: model.avatarURL)
+    nameLabel.text = model.username
+    dateLabel.text = model.date
+  }
+  
+  private let avatarView = UIImageView()
+  private let nameLabel: UILabel = {
+    let label = UILabel()
+    label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+    return label
+  }()
+  private let dateLabel: UILabel = {
+    let label = UILabel()
+    label.font = UIFont.systemFont(ofSize: 10, weight: .thin)
+    return label
+  }()
 }
