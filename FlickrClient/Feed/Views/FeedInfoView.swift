@@ -16,7 +16,7 @@ extension FeedInfoView {
   }
 }
 
-class FeedInfoView: UIView {
+final class FeedInfoView: UIView {
   func update(model: Model) {
     favoritesView.update(model: model.favoritesModel)
     viewsView.update(model: model.viewsModel)

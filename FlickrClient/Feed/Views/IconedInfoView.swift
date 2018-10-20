@@ -22,7 +22,7 @@ extension IconedInfoView {
   }
 }
 
-class IconedInfoView: UIView {
+final class IconedInfoView: UIView {
   func update(model: Model) {
     iconView.image = model.icon
     textLabel.text = model.text

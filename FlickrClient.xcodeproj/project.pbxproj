@@ -40,6 +40,10 @@
 		ED97CF53217B416500C1E54E /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF52217B416500C1E54E /* TableSource.swift */; };
 		ED97CF56217B425100C1E54E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF55217B425100C1E54E /* ListViewController.swift */; };
 		ED97CF58217B428300C1E54E /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF57217B428300C1E54E /* ListView.swift */; };
+		ED97CF5A217B53A200C1E54E /* CommentsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF59217B53A200C1E54E /* CommentsListPresenter.swift */; };
+		ED97CF5C217B542D00C1E54E /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF5B217B542D00C1E54E /* CommentCell.swift */; };
+		ED97CF5F217B550200C1E54E /* CommentPresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF5E217B550200C1E54E /* CommentPresentationModel.swift */; };
+		ED97CF61217B649A00C1E54E /* CommentPresentationModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF60217B649A00C1E54E /* CommentPresentationModel+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		ED97CF52217B416500C1E54E /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
 		ED97CF55217B425100C1E54E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		ED97CF57217B428300C1E54E /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		ED97CF59217B53A200C1E54E /* CommentsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListPresenter.swift; sourceTree = "<group>"; };
+		ED97CF5B217B542D00C1E54E /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		ED97CF5E217B550200C1E54E /* CommentPresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentPresentationModel.swift; sourceTree = "<group>"; };
+		ED97CF60217B649A00C1E54E /* CommentPresentationModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommentPresentationModel+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 				ED97CF4F217B407600C1E54E /* Views */,
 				ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */,
 				0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */,
+				ED97CF59217B53A200C1E54E /* CommentsListPresenter.swift */,
 			);
 			path = CommentsList;
 			sourceTree = "<group>";
@@ -221,7 +230,9 @@
 		ED97CF4F217B407600C1E54E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				ED97CF5D217B54DC00C1E54E /* Models */,
 				ED97CF50217B409B00C1E54E /* CommentsListView.swift */,
+				ED97CF5B217B542D00C1E54E /* CommentCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +244,15 @@
 				ED97CF57217B428300C1E54E /* ListView.swift */,
 			);
 			path = ListViewController;
+			sourceTree = "<group>";
+		};
+		ED97CF5D217B54DC00C1E54E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED97CF5E217B550200C1E54E /* CommentPresentationModel.swift */,
+				ED97CF60217B649A00C1E54E /* CommentPresentationModel+Extensions.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,10 +399,14 @@
 				0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */,
 				0EDE8363217675BF0089CB13 /* FeedPresentationModel.swift in Sources */,
 				0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */,
+				ED97CF5A217B53A200C1E54E /* CommentsListPresenter.swift in Sources */,
+				ED97CF61217B649A00C1E54E /* CommentPresentationModel+Extensions.swift in Sources */,
 				0EDE836E21767CA00089CB13 /* FeedPresentationModel+Extensions.swift in Sources */,
 				0E6D0E8321765FDA00623EE3 /* AppDelegate.swift in Sources */,
+				ED97CF5F217B550200C1E54E /* CommentPresentationModel.swift in Sources */,
 				0EDE837F217908820089CB13 /* FeedService.swift in Sources */,
 				ED97CF58217B428300C1E54E /* ListView.swift in Sources */,
+				ED97CF5C217B542D00C1E54E /* CommentCell.swift in Sources */,
 				0EA1EF8B217A71A70056CCA4 /* CommentsListFactory.swift in Sources */,
 				ED97CF53217B416500C1E54E /* TableSource.swift in Sources */,
 				0EA1EF86217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift in Sources */,

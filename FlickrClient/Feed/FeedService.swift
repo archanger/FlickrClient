@@ -13,6 +13,8 @@ final class FeedService {
     _networkProvider = networkProvider
   }
   
+  //flickr.interestingness.getList
+  //flickr.photos.getRecent
   private let _networkProvider: AbstractNetworkProvider
   private let _entrypoint = "https://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=55ab2f1fa8ca6c25c2d68ac1b46a1ecf&format=json&extras=description,count_faves,count_comments,owner_name,url_z,views,icon_server&nojsoncallback=1"
 }

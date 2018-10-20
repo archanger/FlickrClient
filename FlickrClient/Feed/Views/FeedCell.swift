@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class FeedCell: UITableViewCell {
+final class FeedCell: UITableViewCell {
   func update(model: FeedPresentationModel) {
     avatarView.update(model: model.avatarModel)
     mainPhotoView.update(model: model.mainPhotoModel)

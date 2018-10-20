@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CommentsListView: UIView {
+final class CommentsListView: UIView {
   weak var source: TableSource? {
     didSet {
       _tableView.dataSource = source

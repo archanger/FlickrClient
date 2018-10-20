@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class FeedView: UIView {
+final class FeedView: UIView {
   weak var source: TableSource? {
     didSet {
       _tableView.dataSource = source

@@ -35,7 +35,7 @@ final class FeedPresenter: NSObject {
     )
   }
   
-  private var models = [FeedsPhoto]()
+  private var _models = [FeedsPhoto]()
   private let _router: FeedRouterProtocol
 }
 
@@ -45,18 +45,18 @@ extension FeedPresenter: TableSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return models.count
+    return _models.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let presentationModel = prepareEntityToPresentation(models[indexPath.row])
+    let presentationModel = prepareEntityToPresentation(_models[indexPath.row])
     return presentationModel.tableView(tableView, cellForRowAt: indexPath)
   }
 }
 
 extension FeedPresenter: FeedPresenterProtocol {
   func dataLoaded(_ data: [FeedsPhoto]) {
-    models.append(contentsOf: data)
+    _models.append(contentsOf: data)
     view?.reloadData()
   }
   

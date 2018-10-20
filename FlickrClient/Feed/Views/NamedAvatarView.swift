@@ -16,7 +16,7 @@ extension NamedAvatarView {
   }
 }
 
-class NamedAvatarView: UIView {
+final class NamedAvatarView: UIView {
   func update(model: Model) {
     avatarImageView.kf.setImage(with: model.imageURL)
     nameLabel.text = model.name

@@ -17,7 +17,7 @@ extension FeedMainPhotoView {
   }
 }
 
-class FeedMainPhotoView: UIView {
+final class FeedMainPhotoView: UIView {
   func update(model: Model) {
     imageView.kf.setImage(with: model.imageURL)
     titleLabel.text = model.title
