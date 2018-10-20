@@ -46,6 +46,6 @@ final class NamedAvatarView: UIView {
     fatalError("init(coder:) has not been implemented")
   }
   
-  private let avatarImageView = UIImageView()
+  private let avatarImageView = RoundedImageView()
   private let nameLabel = UILabel()
 }

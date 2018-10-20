@@ -45,7 +45,7 @@ final class CommentCell: UITableViewCell {
     dateLabel.text = model.date
   }
   
-  private let avatarView = UIImageView()
+  private let avatarView = RoundedImageView()
   private let dateLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 10, weight: .thin)

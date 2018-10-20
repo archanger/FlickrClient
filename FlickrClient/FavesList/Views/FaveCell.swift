@@ -45,7 +45,7 @@ final class FaveCell: UITableViewCell {
     dateLabel.text = model.date
   }
   
-  private let avatarView = UIImageView()
+  private let avatarView = RoundedImageView()
   private let nameLabel: UILabel = {
     let label = UILabel()
     label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
