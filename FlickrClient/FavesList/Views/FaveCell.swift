@@ -17,21 +17,21 @@ final class FaveCell: UITableViewCell {
     addSubview(dateLabel)
     
     avatarView.snp.makeConstraints { (make) in
-      make.top.leading.equalToSuperview().inset(8)
+      make.top.leading.equalToSuperview().inset(GLOBAL_APPEARANCE.insets)
       make.height.width.equalTo(44)
-      make.bottom.lessThanOrEqualToSuperview().inset(8)
+      make.bottom.lessThanOrEqualToSuperview().inset(GLOBAL_APPEARANCE.insets)
     }
     
     nameLabel.snp.makeConstraints { (make) in
       make.top.equalTo(avatarView)
       make.leading.equalTo(avatarView.snp.trailing).offset(8)
-      make.trailing.lessThanOrEqualToSuperview().inset(8)
+      make.trailing.lessThanOrEqualToSuperview().inset(GLOBAL_APPEARANCE.insets)
     }
     
     dateLabel.snp.makeConstraints { (make) in
       make.leading.equalTo(nameLabel)
       make.top.equalTo(nameLabel.snp.bottom).offset(8)
-      make.bottom.lessThanOrEqualToSuperview().inset(8)
+      make.bottom.lessThanOrEqualToSuperview().inset(GLOBAL_APPEARANCE.insets)
     }
   }
   

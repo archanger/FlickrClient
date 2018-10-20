@@ -46,8 +46,8 @@ final class FeedMainPhotoView: UIView {
     }
     
     titleLabel.snp.makeConstraints { make in
-      make.top.leading.bottom.equalToSuperview().inset(8)
-      make.trailing.lessThanOrEqualToSuperview().inset(8)
+      make.top.leading.bottom.equalToSuperview().inset(GLOBAL_APPEARANCE.insets)
+      make.trailing.lessThanOrEqualToSuperview().inset(GLOBAL_APPEARANCE.insets)
     }
   }
   

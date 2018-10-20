@@ -28,17 +28,17 @@ final class FeedCell: UITableViewCell {
     addSubview(infoView)
     
     avatarView.snp.makeConstraints { make in
-      make.top.leading.trailing.equalToSuperview().inset(8)
+      make.top.leading.trailing.equalToSuperview().inset(GLOBAL_APPEARANCE.insets)
     }
     
     mainPhotoView.snp.makeConstraints { make in
       make.top.equalTo(avatarView.snp.bottom).offset(8)
-      make.leading.trailing.equalToSuperview().inset(8)
+      make.leading.trailing.equalToSuperview().inset(GLOBAL_APPEARANCE.insets)
       make.height.equalTo(mainPhotoView.snp.width)
     }
     
     infoView.snp.makeConstraints { make in
-      make.leading.bottom.trailing.equalToSuperview().inset(8)
+      make.leading.bottom.trailing.equalToSuperview().inset(GLOBAL_APPEARANCE.insets)
       make.top.equalTo(mainPhotoView.snp.bottom).offset(8)
     }
   }
