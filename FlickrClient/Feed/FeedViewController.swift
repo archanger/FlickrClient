@@ -19,7 +19,6 @@ class FeedViewController: ListViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .orange
     title = "Photos"
     
     interactor.loadDta()
