@@ -48,6 +48,7 @@
 		ED97CF65217B774500C1E54E /* CommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF64217B774500C1E54E /* CommentsService.swift */; };
 		ED97CF68217B77E200C1E54E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF67217B77E200C1E54E /* Comment.swift */; };
 		ED97CF6A217B78CA00C1E54E /* CommentsCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF69217B78CA00C1E54E /* CommentsCollectionResponse.swift */; };
+		ED97CF6C217B86C600C1E54E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		ED97CF64217B774500C1E54E /* CommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsService.swift; sourceTree = "<group>"; };
 		ED97CF67217B77E200C1E54E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		ED97CF69217B78CA00C1E54E /* CommentsCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCollectionResponse.swift; sourceTree = "<group>"; };
+		ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 				0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */,
 				0EA1EF87217A6BF50056CCA4 /* Action.swift */,
 				ED97CF52217B416500C1E54E /* TableSource.swift */,
+				ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				0EDE83782177C99F0089CB13 /* FeedInfoView.swift in Sources */,
 				0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */,
 				0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */,
+				ED97CF6C217B86C600C1E54E /* DateFormatter+Extensions.swift in Sources */,
 				0EDE836C21767B510089CB13 /* UITableView+Extensions.swift in Sources */,
 				ED97CF4E217B403F00C1E54E /* CommentsListViewController.swift in Sources */,
 				0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */,

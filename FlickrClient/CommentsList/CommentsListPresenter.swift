@@ -16,11 +16,7 @@ protocol CommentsListViewProtocol: class {
 final class CommentsListPresenter: NSObject {
   weak var view: CommentsListViewProtocol?
   
-  private var _models: [CommentPresentationModel] = [
-    CommentPresentationModel(title: "Helloo1"),
-    CommentPresentationModel(title: "Hello2"),
-    CommentPresentationModel(title: "Helloo34")
-  ]
+  private var _models: [Comment] = []
 }
 
 extension CommentsListPresenter: TableSource {
@@ -33,7 +29,7 @@ extension CommentsListPresenter: TableSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    return _models[indexPath.row].tableView(tableView, cellForRowAt: indexPath)
+    return _models[indexPath.row].presentationModel.tableView(tableView, cellForRowAt: indexPath)
   }
 }
 
@@ -42,7 +38,31 @@ extension CommentsListPresenter: CommentsListPresenterProtocol {
     view?.display(error: error)
   }
   
-  func dataLoaded() {
+  func dataLoaded(_ data: [Comment]) {
+    _models.append(contentsOf: data)
     view?.reloadData()
+  }
+}
+
+private extension Comment {
+  var presentationModel: CommentPresentationModel {
+    let contentString = NSMutableAttributedString(
+      string: username,
+      attributes: [.font: UIFont.systemFont(ofSize: 14, weight: .bold)]
+    )
+    
+    contentString.append(NSAttributedString(
+      string: " " + content,
+      attributes: [.font: UIFont.systemFont(ofSize: 12, weight: .regular)]))
+    
+    return CommentPresentationModel(
+      avatarURL: avatarURL,
+      content: contentString,
+      date: DateFormatter.localizedString(
+        from: Date(timeIntervalSince1970: creationDate),
+        dateStyle: .medium,
+        timeStyle: .short
+      )
+    )
   }
 }

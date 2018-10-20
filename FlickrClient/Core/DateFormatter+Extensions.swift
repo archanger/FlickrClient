@@ -1,5 +1,5 @@
 //
-//  CommentPresentationModel.swift
+//  DateFormatter+Extensions.swift
 //  FlickrClient
 //
 //  Created by Кирилл Чуянов on 20/10/2018.
@@ -8,8 +8,6 @@
 
 import Foundation
 
-struct CommentPresentationModel {
-  let avatarURL: URL?
-  let content: NSAttributedString
-  let date: String
+extension DateFormatter {
+  
 }

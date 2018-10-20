@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CommentsListPresenterProtocol {
-  func dataLoaded()
+  func dataLoaded(_ data: [Comment])
   func failedLoading(with error: Error)
 }
 
@@ -39,7 +39,7 @@ extension CommentsListInteractor: CommentsListInteractorProtocol {
       for: _photoID, 
       onComlete: { comments in
         DispatchQueue.main.async {
-          self._presenter.dataLoaded()
+          self._presenter.dataLoaded(comments)
         }
       },
       onFailure: { error in
