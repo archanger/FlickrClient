@@ -4,6 +4,7 @@ Application that shows the feed of Photos with tag `recipe`. It can show You who
 
 # What I didn't
 
+* Pretty nice struct for representing API Entrypoint
 * Made a constants for magic numbers in layouting
 * Made a constants for magic strings
 * Tests
