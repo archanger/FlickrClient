@@ -23,7 +23,7 @@ extension CommentsCollectionResponse: Decodable {
     struct Comments: Decodable {
       let comment: [ResponseComment]
       
-      struct ResponseComment: Decodable {
+      struct ResponseComment: Decodable, AvatarRepresentable, UsernameRepresentable {
         let id: String
         let author: String
         let iconserver: String
@@ -32,17 +32,11 @@ extension CommentsCollectionResponse: Decodable {
         let realname: String
         let _content: String
         let datecreate: String
-        
-        func avatarURL() -> URL? {
-          return (Int(iconserver) ?? 0) > 0
-            ? URL(string: "https://farm\(iconfarm).staticflickr.com/\(iconserver)/buddyicons/\(author).jpg")
-            : URL(string: "https://www.flickr.com/images/buddyicon.gif")
+        var nsid: String {
+          return author
         }
-        
-        func username() -> String {
-          return realname.isEmpty
-            ? authorname
-            : realname
+        var username: String {
+          return authorname
         }
       }
     }

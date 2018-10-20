@@ -23,25 +23,13 @@ extension FavesCollectionResponse: Decodable {
     struct Photo: Decodable {
       let person: [ResponsePerson]
       
-      struct ResponsePerson: Decodable {
+      struct ResponsePerson: Decodable, AvatarRepresentable, UsernameRepresentable {
         let nsid: String
         let username: String
         let realname: String
         let favedate: String
         let iconserver: String
         let iconfarm: Int
-        
-        func avatarURL() -> URL? {
-          return (Int(iconserver) ?? 0) > 0
-            ? URL(string: "https://farm\(iconfarm).staticflickr.com/\(iconserver)/buddyicons/\(nsid).jpg")
-            : URL(string: "https://www.flickr.com/images/buddyicon.gif")
-        }
-        
-        func name() -> String {
-          return realname.isEmpty
-            ? username
-            : realname
-        }
       }
     }
   }
@@ -51,7 +39,7 @@ extension FavesCollectionResponse: Decodable {
     faves = response.photo?.person.map {
       Fave(
         id: $0.nsid,
-        username: $0.name(),
+        username: $0.username(),
         date: TimeInterval($0.favedate) ?? 0,
         avatarURL: $0.avatarURL()
       )

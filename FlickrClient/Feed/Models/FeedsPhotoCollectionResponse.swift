@@ -23,7 +23,7 @@ extension FeedsPhotoCollectionResponse: Decodable {
     struct Photos: Decodable {
       let photo: [ResponsePhoto]
       
-      struct ResponsePhoto: Decodable {
+      struct ResponsePhoto: Decodable, AvatarRepresentable {
         let id: String
         let farm: Int
         let server: String
@@ -38,11 +38,8 @@ extension FeedsPhotoCollectionResponse: Decodable {
         let owner: String
         let originalformat: String?
         let originalsecret: String?
-        
-        func avatarURL() -> URL? {
-          return (Int(iconserver) ?? 0) > 0
-            ? URL(string: "https://farm\(iconfarm).staticflickr.com/\(iconserver)/buddyicons/\(owner).jpg")
-            : URL(string: "https://www.flickr.com/images/buddyicon.gif")
+        var nsid: String {
+          return owner
         }
         
         func imageURL() -> URL? {
