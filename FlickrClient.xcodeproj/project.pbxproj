@@ -15,7 +15,6 @@
 		0EA1EF86217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF85217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift */; };
 		0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF87217A6BF50056CCA4 /* Action.swift */; };
 		0EA1EF8B217A71A70056CCA4 /* CommentsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */; };
-		0EA1EF8D217A72200056CCA4 /* CommentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8C217A72200056CCA4 /* CommentsListViewController.swift */; };
 		0EA1EF8F217A725F0056CCA4 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1EF8E217A725F0056CCA4 /* FeedRouter.swift */; };
 		0EDE8355217668F40089CB13 /* FeedFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE8354217668F40089CB13 /* FeedFactory.swift */; };
 		0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE835621766A360089CB13 /* FeedViewController.swift */; };
@@ -36,6 +35,11 @@
 		0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE837C217903910089CB13 /* FeedsPhoto.swift */; };
 		0EDE837F217908820089CB13 /* FeedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE837E217908820089CB13 /* FeedService.swift */; };
 		0EDE838121790B750089CB13 /* AbstractNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDE838021790B750089CB13 /* AbstractNetworkProvider.swift */; };
+		ED97CF4E217B403F00C1E54E /* CommentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */; };
+		ED97CF51217B409B00C1E54E /* CommentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF50217B409B00C1E54E /* CommentsListView.swift */; };
+		ED97CF53217B416500C1E54E /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF52217B416500C1E54E /* TableSource.swift */; };
+		ED97CF56217B425100C1E54E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF55217B425100C1E54E /* ListViewController.swift */; };
+		ED97CF58217B428300C1E54E /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF57217B428300C1E54E /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +52,6 @@
 		0EA1EF85217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsPhotoCollectionResponse.swift; sourceTree = "<group>"; };
 		0EA1EF87217A6BF50056CCA4 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListFactory.swift; sourceTree = "<group>"; };
-		0EA1EF8C217A72200056CCA4 /* CommentsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommentsListViewController.swift; path = /Users/kirillchuyanov/Projects/FlickrClient/FlickrClient/CommentsList/CommentsListViewController.swift; sourceTree = "<absolute>"; };
 		0EA1EF8E217A725F0056CCA4 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
 		0EDE8354217668F40089CB13 /* FeedFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFactory.swift; sourceTree = "<group>"; };
 		0EDE835621766A360089CB13 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +75,11 @@
 		1AA449519ADF93213C74F775 /* Pods-FlickrClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.release.xcconfig"; sourceTree = "<group>"; };
 		316E7DB3F54C1B695DF6E017 /* Pods_FlickrClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC00A0B98C8C808BC8B3A276 /* Pods-FlickrClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickrClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlickrClient/Pods-FlickrClient.debug.xcconfig"; sourceTree = "<group>"; };
+		ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsListViewController.swift; sourceTree = "<group>"; };
+		ED97CF50217B409B00C1E54E /* CommentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsListView.swift; sourceTree = "<group>"; };
+		ED97CF52217B416500C1E54E /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
+		ED97CF55217B425100C1E54E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		ED97CF57217B428300C1E54E /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +131,8 @@
 		0EA1EF89217A71760056CCA4 /* CommentsList */ = {
 			isa = PBXGroup;
 			children = (
-				0EA1EF8C217A72200056CCA4 /* CommentsListViewController.swift */,
+				ED97CF4F217B407600C1E54E /* Views */,
+				ED97CF4D217B403F00C1E54E /* CommentsListViewController.swift */,
 				0EA1EF8A217A71A70056CCA4 /* CommentsListFactory.swift */,
 			);
 			path = CommentsList;
@@ -171,12 +180,14 @@
 		0EDE8364217676810089CB13 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ED97CF54217B423E00C1E54E /* ListViewController */,
 				0EDE83652176769E0089CB13 /* CustomViewController.swift */,
 				0EDE836921767AD90089CB13 /* CellPresentableModel.swift */,
 				0EDE836B21767B510089CB13 /* UITableView+Extensions.swift */,
 				0EDE838021790B750089CB13 /* AbstractNetworkProvider.swift */,
 				0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */,
 				0EA1EF87217A6BF50056CCA4 /* Action.swift */,
+				ED97CF52217B416500C1E54E /* TableSource.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -205,6 +216,23 @@
 				316E7DB3F54C1B695DF6E017 /* Pods_FlickrClient.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED97CF4F217B407600C1E54E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ED97CF50217B409B00C1E54E /* CommentsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ED97CF54217B423E00C1E54E /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED97CF55217B425100C1E54E /* ListViewController.swift */,
+				ED97CF57217B428300C1E54E /* ListView.swift */,
+			);
+			path = ListViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +361,9 @@
 				0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */,
 				0EDE836A21767AD90089CB13 /* CellPresentableModel.swift in Sources */,
 				0EDE837021767E5A0089CB13 /* FeedInteractor.swift in Sources */,
+				ED97CF51217B409B00C1E54E /* CommentsListView.swift in Sources */,
 				0EDE838121790B750089CB13 /* AbstractNetworkProvider.swift in Sources */,
+				ED97CF56217B425100C1E54E /* ListViewController.swift in Sources */,
 				0EA1EF82217A65EF0056CCA4 /* ResponseStats.swift in Sources */,
 				0EDE83662176769E0089CB13 /* CustomViewController.swift in Sources */,
 				0EA1EF8F217A725F0056CCA4 /* FeedRouter.swift in Sources */,
@@ -345,14 +375,16 @@
 				0EDE837D217903910089CB13 /* FeedsPhoto.swift in Sources */,
 				0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */,
 				0EDE836C21767B510089CB13 /* UITableView+Extensions.swift in Sources */,
+				ED97CF4E217B403F00C1E54E /* CommentsListViewController.swift in Sources */,
 				0EDE835C21766BD30089CB13 /* FeedCell.swift in Sources */,
-				0EA1EF8D217A72200056CCA4 /* CommentsListViewController.swift in Sources */,
 				0EDE8363217675BF0089CB13 /* FeedPresentationModel.swift in Sources */,
 				0EDE835821766A360089CB13 /* FeedViewController.swift in Sources */,
 				0EDE836E21767CA00089CB13 /* FeedPresentationModel+Extensions.swift in Sources */,
 				0E6D0E8321765FDA00623EE3 /* AppDelegate.swift in Sources */,
 				0EDE837F217908820089CB13 /* FeedService.swift in Sources */,
+				ED97CF58217B428300C1E54E /* ListView.swift in Sources */,
 				0EA1EF8B217A71A70056CCA4 /* CommentsListFactory.swift in Sources */,
+				ED97CF53217B416500C1E54E /* TableSource.swift in Sources */,
 				0EA1EF86217A66310056CCA4 /* FeedsPhotoCollectionResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

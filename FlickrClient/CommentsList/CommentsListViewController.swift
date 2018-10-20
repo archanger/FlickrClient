@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommentsListViewController: CustomViewController<UIView> {
+class CommentsListViewController: ListViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()

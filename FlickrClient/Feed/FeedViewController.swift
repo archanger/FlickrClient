@@ -12,13 +12,9 @@ protocol FeedInteractorProtocol {
   func loadDta()
 }
 
-class FeedViewController: CustomViewController<FeedView> {
+class FeedViewController: ListViewController {
   
   var interactor: FeedInteractorProtocol!
-  
-  func setTableSource(_ tableSource: TableSource) {
-    customView.source = tableSource
-  }
   
   override func viewDidLoad() {
     super.viewDidLoad()

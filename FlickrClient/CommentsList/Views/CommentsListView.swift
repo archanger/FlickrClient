@@ -1,15 +1,14 @@
 //
-//  FeedView.swift
+//  CommentsListView.swift
 //  FlickrClient
 //
-//  Created by Кирилл Чуянов on 16/10/2018.
+//  Created by Кирилл Чуянов on 20/10/2018.
 //  Copyright © 2018 Kirill Chuyanov. All rights reserved.
 //
 
 import UIKit
-import SnapKit
 
-class FeedView: UIView {
+class CommentsListView: UIView {
   weak var source: TableSource? {
     didSet {
       _tableView.dataSource = source
@@ -23,7 +22,7 @@ class FeedView: UIView {
   }
   
   override init(frame: CGRect) {
-    super.init(frame: .zero)
+    super.init(frame: frame)
     
     backgroundColor = .white
     
