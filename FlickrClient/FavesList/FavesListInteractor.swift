@@ -13,25 +13,40 @@ protocol FavesListPresenterProtocol {
   func failedLoading(with error: Error)
 }
 
+protocol FavesServiceProtocol {
+  func receiveList(for photoID: String, onComlete: @escaping ([Fave]) -> Void, onFailure: @escaping (Error) -> Void)
+}
+
 final class FavesListInteractor {
-  init(photoID: String, presenter: FavesListPresenterProtocol) {
+  init(
+    photoID: String,
+    presenter: FavesListPresenterProtocol,
+    service: FavesServiceProtocol
+  ) {
+    _service = service
     _presenter = presenter
     _photoID = photoID
   }
   
+  private let _service: FavesServiceProtocol
   private let _presenter: FavesListPresenterProtocol
   private let _photoID: String
 }
 
 extension FavesListInteractor: FavesListInteractorProtocol {
   func loadData() {
-    _presenter.dataLoaded(
-      [
-        Fave(id: "id", username: "s1", date: 0),
-        Fave(id: "id", username: "s2", date: 0),
-        Fave(id: "id", username: "s3", date: 0),
-        Fave(id: "id", username: "s4", date: 0)
-      ]
+    _service.receiveList(
+      for: _photoID,
+      onComlete: {[weak self] faves in
+        DispatchQueue.main.async {
+          self?._presenter.dataLoaded(faves)
+        }
+      },
+      onFailure: {[weak self] error in
+        DispatchQueue.main.async {
+          self?._presenter.failedLoading(with: error)
+        }
+      }
     )
   }
 }

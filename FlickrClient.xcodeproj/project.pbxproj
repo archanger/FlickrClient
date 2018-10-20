@@ -57,6 +57,8 @@
 		ED97CF7B217BA21500C1E54E /* FaveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF7A217BA21500C1E54E /* FaveCell.swift */; };
 		ED97CF7E217BA23600C1E54E /* FavePresentationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF7D217BA23600C1E54E /* FavePresentationModel.swift */; };
 		ED97CF80217BA2BB00C1E54E /* FavePresentationModel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF7F217BA2BB00C1E54E /* FavePresentationModel+Extensions.swift */; };
+		ED97CF82217BA5E800C1E54E /* FavesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF81217BA5E800C1E54E /* FavesService.swift */; };
+		ED97CF84217BA6E100C1E54E /* FavesCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF83217BA6E100C1E54E /* FavesCollectionResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,8 @@
 		ED97CF7A217BA21500C1E54E /* FaveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaveCell.swift; sourceTree = "<group>"; };
 		ED97CF7D217BA23600C1E54E /* FavePresentationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavePresentationModel.swift; sourceTree = "<group>"; };
 		ED97CF7F217BA2BB00C1E54E /* FavePresentationModel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavePresentationModel+Extensions.swift"; sourceTree = "<group>"; };
+		ED97CF81217BA5E800C1E54E /* FavesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesService.swift; sourceTree = "<group>"; };
+		ED97CF83217BA6E100C1E54E /* FavesCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesCollectionResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +308,7 @@
 				ED97CF70217B9DB600C1E54E /* FavesListFacroty.swift */,
 				ED97CF72217BA02900C1E54E /* FavesListInteractor.swift */,
 				ED97CF77217BA17000C1E54E /* FavesListPresenter.swift */,
+				ED97CF81217BA5E800C1E54E /* FavesService.swift */,
 			);
 			path = FavesList;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				ED97CF75217BA10600C1E54E /* Fave.swift */,
+				ED97CF83217BA6E100C1E54E /* FavesCollectionResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				0EA1EF88217A6BF50056CCA4 /* Action.swift in Sources */,
 				ED97CF63217B6FD500C1E54E /* CommentsListInteractor.swift in Sources */,
 				0EDE836A21767AD90089CB13 /* CellPresentableModel.swift in Sources */,
+				ED97CF82217BA5E800C1E54E /* FavesService.swift in Sources */,
 				0EDE837021767E5A0089CB13 /* FeedInteractor.swift in Sources */,
 				ED97CF51217B409B00C1E54E /* CommentsListView.swift in Sources */,
 				ED97CF65217B774500C1E54E /* CommentsService.swift in Sources */,
@@ -479,6 +486,7 @@
 				0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */,
 				ED97CF7E217BA23600C1E54E /* FavePresentationModel.swift in Sources */,
 				ED97CF6C217B86C600C1E54E /* DateFormatter+Extensions.swift in Sources */,
+				ED97CF84217BA6E100C1E54E /* FavesCollectionResponse.swift in Sources */,
 				ED97CF76217BA10600C1E54E /* Fave.swift in Sources */,
 				0EDE836C21767B510089CB13 /* UITableView+Extensions.swift in Sources */,
 				ED97CF4E217B403F00C1E54E /* CommentsListViewController.swift in Sources */,

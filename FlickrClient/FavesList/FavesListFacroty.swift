@@ -14,7 +14,8 @@ final class FavesListFactory {
     let presenter = FavesListPresenter()
     let interactor = FavesListInteractor(
       photoID: photoID,
-      presenter: presenter
+      presenter: presenter,
+      service: FaveService(networkProvider: NetworkProvider())
     )
     
     vc.interactor = interactor
