@@ -12,25 +12,17 @@ final class GradientView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     
-    backgroundColor = .clear
-    
-    layer.addSublayer(gradientLayer)
+    if let gLayer = layer as? CAGradientLayer {
+      gLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+      gLayer.locations = [0.0, 0.6]
+    }
   }
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
   
-  override func layoutSubviews() {
-    super.layoutSubviews()
-    
-    gradientLayer.frame = bounds
+  override class var layerClass: AnyClass {
+    return CAGradientLayer.self
   }
-  
-  private let gradientLayer: CAGradientLayer = {
-    let layer = CAGradientLayer()
-    layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
-    layer.locations = [0.0, 0.6]
-    return layer
-  }()
 }

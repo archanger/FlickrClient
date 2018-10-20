@@ -46,7 +46,6 @@
 		ED97CF65217B774500C1E54E /* CommentsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF64217B774500C1E54E /* CommentsService.swift */; };
 		ED97CF68217B77E200C1E54E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF67217B77E200C1E54E /* Comment.swift */; };
 		ED97CF6A217B78CA00C1E54E /* CommentsCollectionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF69217B78CA00C1E54E /* CommentsCollectionResponse.swift */; };
-		ED97CF6C217B86C600C1E54E /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */; };
 		ED97CF71217B9DB600C1E54E /* FavesListFacroty.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF70217B9DB600C1E54E /* FavesListFacroty.swift */; };
 		ED97CF73217BA02900C1E54E /* FavesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF72217BA02900C1E54E /* FavesListInteractor.swift */; };
 		ED97CF76217BA10600C1E54E /* Fave.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97CF75217BA10600C1E54E /* Fave.swift */; };
@@ -107,7 +106,6 @@
 		ED97CF64217B774500C1E54E /* CommentsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsService.swift; sourceTree = "<group>"; };
 		ED97CF67217B77E200C1E54E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		ED97CF69217B78CA00C1E54E /* CommentsCollectionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCollectionResponse.swift; sourceTree = "<group>"; };
-		ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		ED97CF70217B9DB600C1E54E /* FavesListFacroty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesListFacroty.swift; sourceTree = "<group>"; };
 		ED97CF72217BA02900C1E54E /* FavesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavesListInteractor.swift; sourceTree = "<group>"; };
 		ED97CF75217BA10600C1E54E /* Fave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fave.swift; sourceTree = "<group>"; };
@@ -233,7 +231,6 @@
 				0EA1EF81217A65EF0056CCA4 /* ResponseStats.swift */,
 				0EA1EF87217A6BF50056CCA4 /* Action.swift */,
 				ED97CF52217B416500C1E54E /* TableSource.swift */,
-				ED97CF6B217B86C600C1E54E /* DateFormatter+Extensions.swift */,
 				ED97CF85217BB1AF00C1E54E /* RoundedImageView.swift */,
 				ED97CF87217BB48900C1E54E /* GradientView.swift */,
 				ED97CF89217BB6E200C1E54E /* GlobalAppearance.swift */,
@@ -495,7 +492,6 @@
 				0EDE83762177C7520089CB13 /* FeedMainPhotoView.swift in Sources */,
 				ED97CF8E217BBBFC00C1E54E /* UsernameRepresentable.swift in Sources */,
 				ED97CF7E217BA23600C1E54E /* FavePresentationModel.swift in Sources */,
-				ED97CF6C217B86C600C1E54E /* DateFormatter+Extensions.swift in Sources */,
 				ED97CF84217BA6E100C1E54E /* FavesCollectionResponse.swift in Sources */,
 				ED97CF76217BA10600C1E54E /* Fave.swift in Sources */,
 				0EDE836C21767B510089CB13 /* UITableView+Extensions.swift in Sources */,
