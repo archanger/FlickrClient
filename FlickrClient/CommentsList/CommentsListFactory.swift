@@ -13,7 +13,11 @@ final class CommentsListFactory {
     print(photoId)
     let vc = CommentsListViewController()
     let presenter = CommentsListPresenter()
-    let interactor = CommentsListInteractor(presenter: presenter)
+    let interactor = CommentsListInteractor(
+      photoID: photoId,
+      presenter: presenter,
+      service: CommentsService(networkProvider: NetworkProvider())
+    )
     vc.interactor = interactor
     vc.setTableSource(presenter)
     presenter.view = vc

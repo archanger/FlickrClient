@@ -14,7 +14,7 @@ struct FeedsPhotoCollectionResponse {
 }
 
 extension FeedsPhotoCollectionResponse: Decodable {
-  private struct Response: Decodable {
+  private struct Response: Decodable, ResponseStatsRepresentable {
     let photos: Photos?
     let stat: String
     let code: Int?
@@ -68,6 +68,6 @@ extension FeedsPhotoCollectionResponse: Decodable {
         commentsCount: $0.countComments
       )
     }
-    stats = ResponseStats(stat: response.stat, code: response.code, message: response.message)
+    stats = response.responseStats
   }
 }

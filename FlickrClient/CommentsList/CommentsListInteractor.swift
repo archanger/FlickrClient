@@ -13,16 +13,40 @@ protocol CommentsListPresenterProtocol {
   func failedLoading(with error: Error)
 }
 
+protocol CommetnsServiceProtocol {
+  func receiveList(for photoID: String, onComlete: @escaping ([Comment]) -> Void, onFailure: @escaping (Error) -> Void)
+}
+
 final class CommentsListInteractor {
-  init(presenter: CommentsListPresenterProtocol) {
+  init(
+    photoID: String,
+    presenter: CommentsListPresenterProtocol,
+    service: CommetnsServiceProtocol
+  ) {
     _presenter = presenter
+    _service = service
+    _photoID = photoID
   }
   
   private let _presenter: CommentsListPresenterProtocol
+  private let _service: CommetnsServiceProtocol
+  private let _photoID: String
 }
 
 extension CommentsListInteractor: CommentsListInteractorProtocol {
   func loadData() {
-    _presenter.dataLoaded()
+    _service.receiveList(
+      for: _photoID, 
+      onComlete: { comments in
+        DispatchQueue.main.async {
+          self._presenter.dataLoaded()
+        }
+      },
+      onFailure: { error in
+        DispatchQueue.main.async {
+          self._presenter.failedLoading(with: error)
+        }
+      }
+    )
   }
 }
