@@ -14,7 +14,7 @@ final class FaveService {
   }
   
   private let _networkProvider: AbstractNetworkProvider
-  private let _entrypoint = "https://api.flickr.com/services/rest/?method=flickr.photos.getFavorites&api_key=60b315cbccf376cbdb986492ded229ab&photo_id=%@&format=json&nojsoncallback=1&per_page=100"
+  private let _entrypoint = "https://api.flickr.com/services/rest/?method=flickr.photos.getFavorites&api_key=55ab2f1fa8ca6c25c2d68ac1b46a1ecf&photo_id=%@&format=json&nojsoncallback=1&per_page=100"
 }
 
 extension FaveService: FavesServiceProtocol {

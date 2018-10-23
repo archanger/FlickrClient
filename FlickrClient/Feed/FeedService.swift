@@ -16,7 +16,7 @@ final class FeedService {
   //flickr.interestingness.getList
   //flickr.photos.getRecent
   private let _networkProvider: AbstractNetworkProvider
-  private let _entrypoint = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=60b315cbccf376cbdb986492ded229ab&tags=recipe&format=json&nojsoncallback=1&extras=original_format,description,count_faves,count_comments,owner_name,url_z,views,icon_server&sort=interestingness-desc"
+  private let _entrypoint = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=55ab2f1fa8ca6c25c2d68ac1b46a1ecf&tags=recipe&format=json&nojsoncallback=1&extras=original_format,description,count_faves,count_comments,owner_name,url_z,views,icon_server&sort=interestingness-desc"
 }
 
 extension FeedService: FeedServiceProtocol {
